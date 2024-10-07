@@ -1,0 +1,33 @@
+#include "integracion_numerica.h"
+
+int main(int argc, char *argv[]) {
+    int opcion;
+
+    printf("Seleccione una opción:\n");
+    printf("1. Regla del Trapecio\n");
+    printf("2. Regla del Trapecio Compuesta\n");
+    printf("3. Regla de Simpson 1/3\n");
+    printf("4. Regla de Simpson Compuesta\n");
+    printf("Ingrese su opción: ");
+    scanf("%d", &opcion);
+
+    switch (opcion) {
+        case 1:
+            trapecioFuncion();
+            break;
+        case 2:
+            trapecioTabla();
+            break;
+        case 3:
+            simpsonCompuestoFuncion();
+            break;
+        case 4:
+            simpsonCompuestoTabla();
+            break;
+        default:
+            printf("Opción no válida.\n");
+            break;
+    }
+
+    return 0;
+}
